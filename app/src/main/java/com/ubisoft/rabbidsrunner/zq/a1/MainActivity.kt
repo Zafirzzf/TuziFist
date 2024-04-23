@@ -57,7 +57,7 @@ class MainActivity : ComponentActivity() {
 
     fun initCSJ() {
         val config = TTAdConfig.Builder()
-            .appId("5518096") // 替换为你的穿山甲媒体平台注册的应用ID
+            .appId("5522637") // 替换为你的穿山甲媒体平台注册的应用ID
             .useTextureView(true)
             .appName("忽地笑z1")
             .titleBarTheme(TTAdConstant.TITLE_BAR_THEME_DARK)
@@ -85,7 +85,7 @@ class MainActivity : ComponentActivity() {
     fun showVideoAd() {
         mTTAdNative = TTAdSdk.getAdManager().createAdNative(this)
         val adSlot = AdSlot.Builder()
-            .setCodeId("956924575")
+            .setCodeId("957070374")
             .setAdLoadType(TTAdLoadType.LOAD)
             .build()
         mTTAdNative?.loadRewardVideoAd(adSlot, object: TTAdNative.RewardVideoAdListener {

@@ -8,7 +8,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "story.wmywbyt.com.z1"
+        applicationId "story.wmywbyt.com.fake"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -24,6 +24,21 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildscript {
+
+        repositories {
+            //Gromore maven 仓库
+            maven {
+                url "https://artifact.bytedance.com/repository/pangle"
+            }
+        }
+
+        dependencies {
+            //Gromore自动拉取 Adapre AAR 插件脚本
+            classpath 'com.pangle.cn:mediation-auto-adapter:1.0.3'
         }
     }
     compileOptions {
